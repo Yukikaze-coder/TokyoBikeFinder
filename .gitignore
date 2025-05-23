@@ -10,6 +10,24 @@ lerna-debug.log*
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
+serviceAccountKey.json
+
+# Node.js
+**node_modules/
+
+.env
+npm-debug.log*
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs
+*.log
+
+
 # Runtime data
 pids
 *.pid
