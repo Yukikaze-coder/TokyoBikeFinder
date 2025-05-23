@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "947597888953",
+    "project_id": "tokyobikefinder",
+    "storage_bucket": "tokyobikefinder.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947597888953:android:56135c8ad78ae14c2f3a68",
+        "android_client_info": {
+          "package_name": "com.luigi.motoparktokyo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947597888953-09hc58i3orp4mocude3tq7251jj0m5c4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.luigi.motoparktokyo",
+            "certificate_hash": "2c3b761a7d4a1fd578ba3f847663b7b3d411d470"
+          }
+        },
+        {
+          "client_id": "947597888953-oablqg22bs2qg1ndf4emck0c5svoqdk2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.luigi.motoparktokyo",
+            "certificate_hash": "9f29cbca775cbd041474e318bcff052c93dc8a0f"
+          }
+        },
+        {
+          "client_id": "947597888953-6f7aqbji2hobg3m83d4ahoviadhtumfc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbFyOYYc_2P5IiznyahS6QX6h_Di2Y2xk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947597888953-6f7aqbji2hobg3m83d4ahoviadhtumfc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
