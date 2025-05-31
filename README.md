@@ -1,122 +1,55 @@
-MotoPark Tokyo
-MotoPark Tokyo is a full-stack application that helps users find, add, and favorite motorbike parking spots in Tokyo. It features a Kotlin Android frontend (Jetpack Compose) and a Node.js/Express backend with a PostgreSQL database.
+# MotoPark Tokyo
 
-Features
-Android App (Frontend)
-Login/Register with Firebase Authentication (email + Google)
+MotoPark Tokyo is a modern Android application to help Tokyo’s motorbike and scooter riders **find, share, and save parking spots**—with Google Maps, real-time community updates, and personal favorites.
 
-List all bike parking spots (with spot name, address, capacity, etc.)
+## Features
 
-Add new parking spots (with details and photo URL)
+- **View Parking Spots:** See legal, up-to-date bike parking on a map or list
+- **Add New Spots:** Easily add a new parking location and share it with the community
+- **Save Favorites:** Mark your favorite parking places and access them anytime
+- **User Authentication:** Sign in with email/password or Google (powered by Firebase Auth)
+- **Recent Spots:** Quickly access your recent favorites
+- **Modern UI:** Built in Jetpack Compose, Material 3, and optimized for mobile
 
-Map view (Google Maps with markers for each spot)
+## Tech Stack
 
-Mark/unmark favorite spots (star icon, toggle)
+- **Frontend:** Kotlin, Jetpack Compose, Material 3, Google Maps SDK
+- **Backend:** Node.js, Express.js, PostgreSQL, Ktor (HTTP client)
+- **Authentication:** Firebase Authentication (email/password & Google Sign-in)
+- **Image Uploads:** (future: will support photo uploads for spots)
+- **API:** RESTful, secure with Firebase token middleware
 
-View favorites & recently added spots
+## Screenshots
 
-Modern UI with Jetpack Compose
+![MotoPark Tokyo Logo](./app/src/main/res/drawable/logo.png)
+*(Add your screenshots here)*
 
-Backend (Node.js/Express + PostgreSQL)
-RESTful API for spots and favorites
+## How It Works
 
-User authentication via Firebase ID tokens
+1. **Sign In:** Use Google or email to log in securely.
+2. **Browse or Search:** Find parking spots in the list or directly on the map.
+3. **Add Spots:** Tap “Add” to submit a new parking place with name, address, coordinates, and more.
+4. **Favorite:** Tap the ⭐ on any spot to save it for quick access.
+5. **Manage Favorites:** See your favorites and recent spots in a dedicated screen.
 
-CRUD for parking spots
+## Backend API Endpoints
 
-Favorites management (add/remove/get)
+- `GET /api/spots` — Get all parking spots
+- `POST /api/spots` — Add a new spot (auth required)
+- `GET /api/favorites` — Get current user’s favorites (auth required)
+- `POST /api/favorites` — Add spot to favorites (auth required)
+- `DELETE /api/favorites/:spot_id` — Remove a favorite (auth required)
 
-PostgreSQL database with migration support
+## Setup (Local Development)
 
-Project Structure
+### Prerequisites
 
-MotoParkTokyo/
- ├─ app/            # Android frontend (Kotlin/Jetpack Compose)
- └─ backend/        # Node.js/Express API backend
+- Android Studio (Giraffe or newer recommended)
+- Node.js (18+), npm
+- PostgreSQL
 
-Getting Started
+### 1. Clone the repo
 
-Prerequisites
-
-Android Studio (for frontend)
-
-Node.js (v18+ recommended)
-
-PostgreSQL (locally or remote)
-
-Firebase project (for Auth)
-
-Google Maps API key
-
-Backend Setup
-
-Clone the repo and install dependencies
-
-
-cd backend
-npm install
-
-
-Setup PostgreSQL database
-
-Create a database, e.g. tokyobikefinder
-
-Update backend/.env with your DB credentials
-
-Run database migrations
-
-
-npm run migrate
-# or for Knex: npx knex migrate:latest
-Set Firebase Admin credentials
-
-Place your Firebase admin private key in backend/serviceAccountKey.json
-
-Start the backend server
-
-
-npm start
-# Runs at http://localhost:4000/
-
-Android App Setup
-Open app/ in Android Studio
-
-Add your Google Maps API key
-
-In app/src/main/AndroidManifest.xml:
-
-
-<meta-data
-    android:name="com.google.android.geo.API_KEY"
-    android:value="YOUR_API_KEY_HERE" />
-Add your google-services.json (from Firebase Console) to app/
-
-Connect the emulator or device
-
-Run the app
-
-API Endpoints (Backend)
-Endpoint	Method	Description	Auth Required
-/api/spots	GET	Get all spots	No
-/api/spots	POST	Add new spot	Yes
-/api/favorites	GET	Get user's favorites	Yes
-/api/favorites	POST	Add to favorites	Yes
-/api/favorites/:spot_id	DELETE	Remove from favorites	Yes
-
-All POST/DELETE routes require Firebase ID token in Authorization: Bearer <token> header.
-
-
-Future Improvements
-Photo upload from Android app (currently just URL)
-
-Comments and ratings for each spot
-
-Real-time updates and notifications
-
-Better error handling and user feedback
-
-PWA/web frontend
-
-
-Questions?
-Open an issue or contact the maintainer!
+```bash
+git clone https://github.com/YOUR_USERNAME/MotoParkTokyo.git
+cd MotoParkTokyo
